@@ -1,0 +1,51 @@
+@import url(common.css);
+
+body{
+  font-family: 'Raleway', sans-serif;
+  line-height: 25px;
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+/* Tab Menu */
+.testimonial-section{
+  width: 800px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0,0.15);
+}
+.testimonial-section h1{
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+.testimonial-section h1 span{color: crimson;}
+.testimonial-pic img{
+  width: 100px;
+  filter: grayscale(1);
+  margin: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.testimonial-pic img.active{  /* 탭메뉴 선택시 설정 */
+  border-radius: 50%;
+  filter: none;
+}
+
+
+/* Tab Contetns */
+.testimonial{margin: 20px;}
+.testimonial .content{display: none;}
+.testimonial .content.active{  /* 탭메뉴 클릭시 나오는 콘텐츠 설정 */
+  display: block;
+}
+.testimonial .content p:nth-child(1){
+  font-weight: bold;
+  color: crimson;
+  font-size: 20px;
+}

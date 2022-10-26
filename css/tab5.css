@@ -1,0 +1,92 @@
+@import url(common.css);
+
+header{
+	width: 1100px;
+	height: 400px;
+	margin: auto;
+	position: relative;
+
+}
+.image{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	transition: 0.5s;
+}
+header dl{
+	position: absolute;
+	z-index: 200;
+}
+
+header dl dt { /*탭부분*/
+	/* position: relative; */
+	width: 60px;
+	height: 400px;
+	background: rgba(51, 102, 204, 0.6);
+	border-right: 1px solid rgba(2555, 255, 255, 0.4);
+	float: left;
+	box-sizing: border-box;
+	cursor: pointer;
+	writing-mode: horizontal-tb;
+	transition: 0.3s;
+}
+/* horizontal-tb : 수평방향으로 위(top)에서 아래(bottom)로
+  vertical-rl : 수직방향으로 오른쪽(right)에서 왼쪽(left)으로
+  vertical-lr : 수직방향으로 왼쪽(left)에서 오른쪽(right)으로 */
+
+
+header dl dt h2 {
+	color: #fff;
+	width: 20px;
+	/* border: 1px solid #000; */
+	margin: auto;
+	font-size: 17px;
+	margin-top: 20px;
+	font-weight: normal;
+}
+
+dt.selected { /*제목선택시->jquery에서 불러냄*/
+	/* cursor: default; */
+	background: rgba(5, 55, 155, 0.9);
+}
+
+
+header dl dd { /*각 탭의 내용*/
+	width: 800px;
+	height: 500px;
+	display: none;
+	float: left;
+	position: relative;
+	overflow: auto;
+	/*background:pink;*/
+}
+
+header dl dd:first-of-type {display: block;}
+
+.content {padding: 30px;}
+
+.content .title {
+	font-size: 42px;
+	font-weight: normal;
+	text-transform: uppercase;
+	margin-bottom: 25px;
+	color: #fff;
+}
+
+.content .description {
+	color: #fff;
+	font-size: 12px;
+	line-height: 20px;
+}
+
+.content .read-more {
+	font-size: 14px;
+	text-transform: uppercase;
+	display: inline-block;
+	padding: 8px 16px;
+	margin-top: 20px;
+	border: 1px solid rgba(2555, 255, 255, 0.6);
+}
+
+.content .read-more a {color: #fff;}

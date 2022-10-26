@@ -1,0 +1,60 @@
+@import url(common.css);
+
+*{box-sizing: border-box;}
+body{
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 300;
+  line-height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+section{
+  /* border: 1px solid #000; */
+  width: 1000px;
+  height: 500px;
+  display: flex;
+}
+.accordion{
+  flex: 1;
+  margin-right: 20px;
+}
+.image{
+  flex: 1;
+}
+
+
+.title{
+  border: 1px solid #ddd;
+  padding: 5px;
+  border-radius: 3px;
+  cursor: pointer;
+  padding-left: 15px;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+.title:after{
+  content: '\f105';
+  font-family: fontawesome;
+  float: right;
+  margin-right: 5px;
+  transition: 0.3s;
+}
+.title.active:after{
+  transform: rotate(90deg);
+  color: orange;
+}
+.title:hover,
+.title.active{
+  background-color: #203049;
+  color: #fff;
+}
+
+.desc{
+  padding: 15px;
+  display: none;
+  font-size:15px;
+}
+.desc.active{display: block;}
