@@ -8,7 +8,7 @@ $(document).ready(function(){
     let result = $(this).attr("data-alt");
     $(".tabContents div").removeClass("active");
     $("#" + result).addClass("active"); 
-  
+
   });
 
 });

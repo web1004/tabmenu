@@ -6,7 +6,7 @@ $(document).ready(function(){
     $(this).toggleClass("active");
     $(this).siblings(".content").stop().slideUp();
     $(this).next().stop().slideToggle();
-  
+
   });
 
 });
