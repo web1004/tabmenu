@@ -11,15 +11,11 @@ body{
   text-align: center;
 }
 
-section{
-  width: 800px;
-}
+section{width: 800px;}
 
 /* TabMenu */
-.tabMenu{}
-.btn{overflow: hidden;}
+.btn{display: flex;}
 .btn li{
-  float: left;
   width: 120px;
   background-color: #eee;
   border-right: 1px solid #ddd;

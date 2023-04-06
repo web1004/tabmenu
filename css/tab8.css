@@ -1,40 +1,56 @@
 @import url(common.css);
-
-body{background:#fbf8ef;}
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@100;200;300;400;500;600;700;800;900&display=swap');
+body{
+	background:#fbf8ef;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
 
 #tabmenu{
 	width:1100px;
 	background:#fff;
-	margin:0 auto;
+	margin:auto;
 }
-#tabmenu p{
+#tabmenu h2{
+	font-family: 'Exo', sans-serif;
+	font-weight: 400;
 	text-align:center;
 	font-size:60px;
 	color:#7c1739;
-	padding-top:50px;
+	text-transform: uppercase;
+	position: relative;
+	width: 300px;
+	margin: 20px auto;
 }
-#tabmenu p img{
-	margin-top:20px;
-	padding:0 20px 0 20px;
+#tabmenu h2:before, #tabmenu h2:after{
+	content: '';
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	display: inline-block;
+	width: 43px;
+	height: 29px;
 }
-
-#tabmenu{
-	width:1020px;
-	margin:0 auto;
-	margin-top:20px;
+#tabmenu h2:before{
+	right: 100%;
+	background: url(../image/il.png) no-repeat;
+}
+#tabmenu h2:after{
+	left: 100%;
+	background: url(../image/ir.png) no-repeat;
 }
 .tab{
-	width:666px;
-	height:110px;
-	margin:0 auto;
-	padding-top:20px;
+	/* border: 1px solid #000; */
+	display: flex;
+	justify-content: center;
 }
 .tab li{
 	width:111px;
 	height:110px;
-	float:left;	
+	cursor: pointer;
 }
-
 .tab li.active{
 	display:block;
 	width:111px;
@@ -42,17 +58,15 @@ body{background:#fbf8ef;}
 	background:url(../image/tabon0.png) no-repeat;
 	text-indent:-9999px;
 }
-
-
 .tabContents{
 	clear:both;  
 	margin-top:100px;
 	width:900px;
-	height:500px;
+	height:400px;
 	margin:100px auto;
 	/*background:pink;*/
 }
-.tabContents div ul li{float:left;} 
+.tabContents div ul{display:flex;} 
 .tabContents div ul li img{
 	width:270px;
 	height:270px;
@@ -67,12 +81,10 @@ body{background:#fbf8ef;}
 	text-align:center;
 	margin:10px 0;
 }
-.tabContents h4{
+.tabContents p{
 	width:200px;
 	color:#666;
-	margin:0 auto;
+	margin:auto;
 }
-
 .tabContents div{display: none;}
 .tabContents div.active{display: block;}
-

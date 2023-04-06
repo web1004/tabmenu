@@ -9,13 +9,12 @@
   padding:30px;
   background:#f3f6f7;
   position: relative;
+  display: flex;
 }
 .tab-header{
   width:200px;
-  float: left;
   position:relative;
 }
-
 .tab li{
   width:160px; 
   height:70px; /*->jQuery에서 탭메뉴 움직이는 거리*/
@@ -31,10 +30,7 @@
   z-index:100;  
 }
 .tab li:last-of-type{border-bottom:1px solid #ccc;}
-
-
 .tab li.active{color:#fff;} /*1번째 선택된 글자색 */
-
 .tab-highlight{  /*현재 선택된 탭메뉴->옆으로 이동하는 박스*/
   background:#000; 
   width: 160px;
@@ -43,10 +39,7 @@
   width:160px;
   left:0px;
 }
-
-
 .tab-highlight:after{   /*삼각형모양*/
-  
   content:"";
   position:absolute;
   right:-12px;
@@ -61,11 +54,9 @@
 }
 
 
-
 /*Tab Mneu Contents ---------------------------------------*/
 .tab-contents{
   width: 700px;
-  float: left;
 }
 .tab-contents div{
   margin-top:40px;
@@ -74,9 +65,7 @@
   padding:20px;
   display:none;   
 }
-.tab-contents div.active{
-  display:block;
-}
+.tab-contents div.active{display:block}
 
 .tab-contents #tab1{background-color:#12578f;}
 .tab-contents #tab2{background-color:#64416e;}

@@ -2,7 +2,6 @@
 
 *{box-sizing: border-box;}
 body{
-  font-family: 'Noto Sans KR', sans-serif;
   font-weight: 300;
   line-height: 25px;
   display: flex;
@@ -21,10 +20,7 @@ section{
   flex: 1;
   margin-right: 20px;
 }
-.image{
-  flex: 1;
-}
-
+.image{flex: 1;}
 
 .title{
   border: 1px solid #ddd;
@@ -51,7 +47,6 @@ section{
   background-color: #203049;
   color: #fff;
 }
-
 .desc{
   padding: 15px;
   display: none;
