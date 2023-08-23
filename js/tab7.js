@@ -1,11 +1,11 @@
 $(document).ready(function(){
 
-  $(".tab li").click(function() {
+  $(".tab li").click(function(){
 
-    numh = $(this).index();
-    moveh = +70 * numh; //세로높이 70px씩 증가됨
+    let num = $(this).index();
+    let move = 70*num; //세로높이 70px씩 증가됨
 
-    $(".tab-header .tab-highlight").animate({top: moveh});
+    $(".tab-header .tab-highlight").animate({top: move});
     $(this).siblings().removeClass("active"); 
     $(this).addClass("active"); 
 

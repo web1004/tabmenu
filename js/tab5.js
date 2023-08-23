@@ -2,13 +2,13 @@ $(document).ready(function(){
 
   $("dl dt").click(function(){
 
-    $(this).siblings("dd").hide("slow");
-    $(this).next().show("slow");
     $(this).siblings("dt").removeClass("selected"); 
     $(this).addClass("selected");
+    $(this).siblings("dd").hide("slow");
+    $(this).next().show("slow");
 
-    let dataImage = $(this).attr("data-background");
-    $(".image img").attr('src',dataImage).hide().fadeIn();
+    let dataBackimg = $(this).attr("data-background");
+    $(".image img").attr("src",dataBackimg).hide().fadeIn();
 
   });
 
