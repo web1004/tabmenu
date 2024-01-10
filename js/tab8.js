@@ -10,11 +10,11 @@ $(document).ready(function(){
 
     let inum=$(this).index();
     $(this).find("img").attr({"src":"image/tabon"+inum+".png"});
-    
+
+
     let result = $(this).attr("data-alt");
     $(".tabContents div").removeClass("active");
     $("#" + result).addClass("active");
-
   });
 
 });

@@ -31,14 +31,14 @@ section{
   margin-bottom: 10px;
   transition: 0.3s;
 }
-.title:after{
+.title:after{  /* 처음에 보이는 화살표모양(오른쪽방향) */
   content: '\f105';
   font-family: fontawesome;
   float: right;
   margin-right: 5px;
   transition: 0.3s;
 }
-.title.active:after{
+.title.active:after{  /* JQuery에서 클릭시 바뀌는 화살표모양(아래방향) */
   transform: rotate(90deg);
   color: orange;
 }
