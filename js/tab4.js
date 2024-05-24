@@ -1,10 +1,13 @@
 $(document).ready(function(){
 
-  $(".title").click(function(){
-    $(this).siblings(".title").removeClass("active");
-    $(this).toggleClass("active");
-    $(this).siblings(".content").stop().slideUp();
-    $(this).next().stop().slideToggle();
+  $("dl dt").click(function(){
+    $(this).siblings("dt").removeClass("selected");
+    $(this).toggleClass("selected");
+    $(this).siblings("dd").hide("slow");
+    $(this).next().show("slow");
+
+    let dataBackimg = $(this).attr("data-background");
+    $(".image img").attr("src",dataBackimg).hide().fadeIn();
   });
 
 });

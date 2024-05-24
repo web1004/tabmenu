@@ -1,15 +1,18 @@
 $(document).ready(function(){
 
   $(".tab li").click(function(){
-    let num = $(this).index();
-    let move = 70*num; //세로높이 70px씩 증가됨
 
-    $(".tab-header .tab-highlight").animate({top: move});
-    $(this).siblings().removeClass("active"); 
-    $(this).addClass("active"); 
+    //선택되지 않은 모든 이미지는 회색이미지로.... 
+    for(i=0;i<6;i++){  
+      $(".tab li").eq(i).find("img").attr({"src":"image/tab"+i+".png"}); 
+    }
+
+    $(".i1").removeClass("active");  //css에서 적용된 1번째 현재위치활성화 해지
+    let inum=$(this).index();
+    $(this).find("img").attr({"src":"image/tabon"+inum+".png"});
 
     let result = $(this).attr("data-alt");
-    $(".tab-contents div").removeClass("active");
+    $(".tabContents div").removeClass("active");
     $("#" + result).addClass("active");
   });
 

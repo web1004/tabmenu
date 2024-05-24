@@ -1,55 +1,37 @@
-@import url(common.css);
+@import url(reset.css);
+@import url(font.css);
 
-body{
-  font-family: 'Noto Sans KR', sans-serif;
-  line-height: 25px;
-  background-color: #f4f4f4;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+body {
+  background-color: #000;
+  color: #fff;
+  font-weight: 300;
+  color: #fff;
+}
+
+section{
+  width: 700px;
+  margin: auto;
+}
+section h1 {
   text-align: center;
-}
-
-section{width: 800px;}
-
-/* TabMenu */
-.btn{display: flex;}
-.btn li{
-  width: 120px;
-  background-color: #eee;
-  border-right: 1px solid #ddd;
-  padding: 5px;
-  border-top: 2px solid transparent;
-  cursor: pointer;
-}
-.btn li:last-child {
-  width: 170px;
-  border-right: none;
-}
-.btn li:hover,
-.btn li.active{
-  background-color: #fff;
-  border-top: 2px solid crimson;
-}
-
-
-/* TabContent */
-.tabContents{
-  background-color: #fff;
-  padding: 50px;
-  box-sizing: border-box;
-}
-.tabContents div h2{
+  font-size: 50px;
   font-weight: 500;
-  margin-bottom: 20px;
-  font-size: 20px;
-  text-transform: uppercase;
 }
-.tabContents div{display: none;}
-.tabContents div.active{display: block;}
-
-.tabContents div img{
-  float: left;
-  margin-right: 10px;
+.accordion .title,
+.accordion .content {
+  background-color: #303030;
+  padding: 10px 15px;
+  margin-bottom: 7px;
 }
+.accordion .title {cursor: pointer;}
+.accordion .title:after {
+  content: '\e9c5';
+  font-family: xeicon;
+  float: right;
+  margin-top: 5px;
+  transition: 0.35s;
+}
+.accordion .title.active:after {transform: rotate(45deg);}
+.accordion .title.active {background-color: #7f97cb;}
+.accordion .content {display: none;}
+.accordion .content.active{display: block;} 

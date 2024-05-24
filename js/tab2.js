@@ -1,13 +1,10 @@
 $(document).ready(function(){
 
-  $(".btn li").click(function(){
-
-    $(this).addClass("active");  
-    $(this).siblings().removeClass("active"); 
-    
-    let result = $(this).attr("data-alt");
-    $(".tabContents div").removeClass("active");
-    $("#"+result).addClass("active").hide().fadeIn();
+  $(".title").click(function(){
+    $(this).siblings(".title").removeClass("active");
+    $(this).toggleClass("active");
+    $(this).siblings(".content").stop().slideUp();
+    $(this).next().stop().slideToggle();
   });
 
 });
