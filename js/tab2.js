@@ -8,3 +8,5 @@ $(document).ready(function(){
   });
 
 });
+
+//next(), prev() : 형제요소를 찾을때 사용함

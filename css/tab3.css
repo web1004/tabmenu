@@ -53,4 +53,4 @@ section{
   display: none;
   font-size:15px;
 }
-.desc.active{display: block;}
+.desc.active{display: block;}  /* JQuery에서 active클래스 생성및 삭제 */

@@ -1,16 +1,16 @@
 $(document).ready(function(){
 
   $(".tab li").click(function(){
-    let num = $(this).index();
-    let move = 160*num; //가로폭 160px씩 증가됨
+    let tabNum = $(this).index();
+    let tabMove = 160*tabNum;  //탭의 가로폭 160px씩 증가함
 
-    $(".tab-header .tab-highlight").animate({left: move});
+    $(".tab-header .tab-highlight").animate({left:tabMove});
+    $(this).addClass("active");
     $(this).siblings().removeClass("active");
-    $(this).addClass("active"); 
-
-    let result = $(this).attr("data-alt");
+    
+    let tabResult = $(this).attr("data-alt");
     $(".tab-contents div").removeClass("active");
-    $("#" + result).addClass("active");
+    $("#"+tabResult).addClass("active");
   });
 
 });

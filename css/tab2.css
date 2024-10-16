@@ -31,7 +31,7 @@ section h1 {
   margin-top: 5px;
   transition: 0.35s;
 }
-.accordion .title.active:after {transform: rotate(45deg);}
+.accordion .title.active:after {transform: rotate(45deg);} /* JQuery에서 active클래스 생성및 삭제 */
 .accordion .title.active {background-color: #7f97cb;}
 .accordion .content {display: none;}
-.accordion .content.active{display: block;} 
+.accordion .content.active{display: block;} /* JQuery에서 active클래스 생성및 삭제 */

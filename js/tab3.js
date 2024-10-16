@@ -7,7 +7,7 @@ $(document).ready(function(){
     $(this).next().stop().slideToggle();
 
     let dataImage = $(this).attr("data-image");
-    $(".image img").attr("src",dataImage).hide().fadeIn();
+    $(".image img").attr({"src":dataImage}).hide().fadeIn();
   });
 
 });

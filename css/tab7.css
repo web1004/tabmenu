@@ -1,6 +1,6 @@
 @import url(reset.css);
 @import url(font.css);
-@import url('https://fonts.googleapis.com/css2?family=Exo:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 body{
 	background:#fbf8ef;
 	display: flex;
@@ -52,7 +52,7 @@ body{
 	height:110px;
 	cursor: pointer;
 }
-.tab li.active{
+.tab li.active{  /* JQuery에서 active클래스 생성및 삭제(이미지변경) */
 	display:block;
 	width:111px;
 	height:110px;
@@ -88,4 +88,4 @@ body{
 	margin:auto;
 }
 .tabContents div{display: none;}
-.tabContents div.active{display: block;}
+.tabContents div.active{display: block;}  /* JQuery에서 active클래스 생성및 삭제 */
